@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Analysis</title>
+</head>
+<body>
+    <h1>Text Analysis Results</h1>
+    <div class="analysis-results">
+        <p><strong>Text:</strong> {{ text }}</p>
+        <p><strong>Length:</strong> {{ length }}</p>
+        <p><strong>Number of Digits:</strong> {{ num_digits }}</p>
+        <p><strong>Number of Vowels:</strong> {{ num_vowels }}</p>
+        <p><strong>Letter Frequency:</strong></p>
+        <ul>
+            {% for letter, count in letter_freq.items() %}
+                <li>{{ letter }}: {{ count }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
